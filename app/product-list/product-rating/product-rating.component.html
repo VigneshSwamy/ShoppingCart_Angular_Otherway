@@ -1,0 +1,3 @@
+<span id="givenrating">{{_items}}</span>
+
+<span *ngFor="let star of starJson;" [ngClass]="{'rated': star<=_items}" class="fa fa-star" (click)="btnclick(star)"></span>

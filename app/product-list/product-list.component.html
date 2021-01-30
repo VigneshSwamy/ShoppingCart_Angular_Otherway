@@ -1,0 +1,67 @@
+<!-- Product -->
+<ul class="container nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#allProducts">Show All Products</a></li>
+    <li><a data-toggle="pill" href="#availableProducts">Show Available Products</a></li>    
+  </ul>
+<div class="container tab-content">
+   <div class = "tab-pane fade in active" id="allProducts"> <div *ngFor="let produc of products;" class ="col-sm-4 col-xs-12">
+    <div class = "product" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+    <img src="{{produc.image}}" class="img-responsive">
+    <div appProductGreyHighlight>
+    <h3>{{produc.name}}</h3>
+    <p>{{produc.description}}</p>
+    <span><app-product-rating [messageToChild]="produc.rating" (btnclicked)="btnclickalert($event)"></app-product-rating></span><br>
+    <button (click)="updateCartFunction()" class="btn btn-info">buy</button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Review">User Review</button>
+    </div>
+    </div>
+    </div>
+</div>
+    <div class="tab-pane fade" id="availableProducts">
+    <div *ngFor="let produc of products;"  class ="col-sm-4 col-xs-12" >
+        <div *ngIf="produc.availability" class = "product" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        <img src="{{produc.image}}" class="img-responsive">
+        <div appProductGreyHighlight>
+        <h3>{{produc.name}}</h3>
+        <p>{{produc.description}}</p>
+        <span><app-product-rating [messageToChild]="produc.rating" (btnclicked)="btnclickalert($event)"></app-product-rating></span><br>
+        <button (click)="updateCartFunction()" class="btn btn-info" >buy</button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Review">User Review</button> 
+        </div>
+        </div>
+        </div>
+    </div>
+
+  
+    </div>
+
+    <div class="modal fade" id="Review" role="dialog">
+        <div class="modal-dialog">
+           
+        <!-- Modal content-->
+        <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Product Review</h4>
+        </div>
+        <div class="modal-body">
+        <input type="checkbox" id="showAccReview"  name="showAccReview">
+        <label for="showAccReview">Show Accepted Reviews</label>
+        <div *ngFor="let review of reviews;"  class="rejectReview"> 
+        <p>{{review}}</p>
+        <button type="button" (click)="function(review)" class="btn btn-info rejectButton">Reject Review</button>
+        </div>
+        <div class="addReview">
+        <input type="text" #newReview (keyup.enter)="addReview(newReview.value); newReview.value=''" (blur)="addReview(newReview.value); newReview.value='' " name="review" >
+        <button type="button" (click)="addReview(newReview.value)" class="btn btn-info" >Add Review</button>
+        </div>
+        </div>                 
+        </div>     
+        </div>
+        </div>
+
+        {{cartValue}}
+       
+    
+    
+    <!-- Product -->

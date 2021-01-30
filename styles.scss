@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+.header{
+	width:100%;
+	}
+	.navbar-default {
+    background-color: white;
+    border-color: white;
+}
+.navigation {
+    position: relative;
+    float: right;
+}
+.product {    
+	border: 1px solid lightgray;
+}
+.product div {
+    width: 100%;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.container {
+    margin-bottom: 25px;
+}
+.carousel-indicators{
+visibility: hidden;
+}
+.twowaybindinput{
+    text-align: center;
+}
+.twowaybindoutput{
+    text-align: Left;
+    font-size: 16px;
+}
+.rated {
+    color: blue;
+  }
+  .addReview, .rejectReview {
+    margin-top: 10px;
+    display: flow-root;
+}
+  .btn{
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  .rejectReview p {
+    width: 60%;
+    position: relative;
+    float: left;
+}
+.rejectReview .btn, .addReview .btn {
+    margin-left: 10%;
+    margin-top: 0px;
+}
+
+input#review {
+    width: 59%;
+    margin-left: 1%;
+}
+.strike{
+    text-decoration: line-through;
+  }
+  .hide{
+    visibility: hidden;
+  }
+@media (min-width: 768px){
+.navbar-nav {
+    
+    float: right;
+	}
+	.logo {
+    height: 77px;
+	}
+	.carousel-caption {   
+    left: 60%;
+	bottom: 50px;
+}
+
+}
+@media (max-width: 768px){
+	.item {
+    height: 130px;
+	}
+	.carousel-inner>.item>img {
+   
+    height: inherit;
+}
+.carousel-caption {   
+    left: 30%;
+	bottom: 0px;
+}
+.product {
+    border: none;
+}
+}

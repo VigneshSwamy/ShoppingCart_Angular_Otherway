@@ -1,0 +1,37 @@
+
+[
+    {
+
+        "productId":1,
+        "description": "i5 1TB HDD 8GB",
+        "name":"Laptop1",
+        "image":"assets/img/product-1.png",
+        "rating":4,
+        "starList":["Good product"],
+        "availability":true
+    
+    },
+    {
+
+        "productId":2,
+        "description": "i5 500TB HD 16GB ",
+        "name":"Laptop2",
+        "image":"assets/img/product-2.png",
+        "rating":3,
+        "starList":["Good product2"],
+        "availability":true
+    },
+    {
+
+        "productId":3,
+        "description": "i7 1TB SSD 16GB",
+        "name":"Laptop3",
+        "image":"assets/img/product-3.png",
+        "rating":3,
+        "starList":["Good product3"],
+        "availability":false
+    
+    }
+
+]
+    
